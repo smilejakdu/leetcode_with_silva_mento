@@ -15,7 +15,7 @@ def maxSubArray(nums):
     for i in range(1, len(nums)):
         maxcurr = max(nums[i], maxcurr + nums[i])
         maxglobal = max(maxcurr, maxglobal)
-    return maxglobal # 4
+    return maxglobal  # 4
 
 
 print(maxSubArray(nums))

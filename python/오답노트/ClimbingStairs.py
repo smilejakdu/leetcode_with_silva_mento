@@ -23,12 +23,25 @@ s = 5
 
 
 def climbStairs(n):
-    """
-    :type n: int
-    :rtype: int
-    """
-
-    return
+    if (n == 1): return 1
+    dp = [0] * (n + 1)
+    dp[1] = 1
+    dp[2] = 2
+    for i in range(3, n + 1):
+        dp[i] = dp[i - 1] + dp[i - 2]
+    return dp[-1]
 
 
 print(climbStairs(s))
+
+''':arg
+answer 2
+'''
+
+
+def climbStairs(n):
+    steps = [1, 1]
+    if n >= 2:
+        for i in range(2, n + 1):
+            steps.append(steps[i - 1] + steps[i - 2])
+    return steps[-1]
