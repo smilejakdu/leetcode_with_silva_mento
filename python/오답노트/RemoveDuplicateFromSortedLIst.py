@@ -13,30 +13,22 @@ Output: 1->2->3
 
 
 # Definition for singly-linked list.
-class ListNode(object):
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
-
+# class ListNode(object):
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
 
 # recursive method
-num_list = [1, 1, 2, 3, 3]
-
-
 def deleteDuplicates(head):
     """
     :type head: ListNode
     :rtype: ListNode
     """
-    list_node = ListNode()
     # recursive method
     if not head or not head.next:
         return head
     head.next = deleteDuplicates(head.next)
     return head.next if head.val == head.next.val else head
-
-
-print(deleteDuplicates(num_list))
 
 
 # non-recursive method
