@@ -28,7 +28,6 @@ def deleteDuplicates(head):
     :type head: ListNode
     :rtype: ListNode
     """
-    list_node = ListNode()
     # recursive method
     if not head or not head.next:
         return head
