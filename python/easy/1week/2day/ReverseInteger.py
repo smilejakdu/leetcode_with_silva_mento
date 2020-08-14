@@ -40,7 +40,7 @@ class Solution(object):
 
             for i in range(list_index, len(number_list_reverse)):
                 result_list.append(number_list_reverse[i])
-            if int(''.join(result_list)) >2147483648:
+            if int(''.join(result_list)) > 2147483648:
                 return 0
 
             result_list.insert(0, minus)
@@ -65,3 +65,15 @@ class Solution(object):
 
         elif 0 == x:
             return 0
+
+
+''':arg
+깔끔하고 좋은풀이 같다
+'''
+
+
+class Solution:
+    def reverse(self, x: int) -> int:
+        rev = int(str(abs(x))[::-1]) # 절대값으로 바꾸고 그것을 거꾸로해서 변수에 담는다
+        return (-rev if x < 0 else rev) if rev.bit_length() < 32 else 0
+

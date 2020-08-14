@@ -30,3 +30,16 @@ def longestCommonPrefix(strs):
 
 
 print(longestCommonPrefix(Input))
+
+
+class Solution:
+    def longestCommonPrefix(strs):
+        if not strs:
+            return ''
+        res = ''
+        for s in zip(*strs):
+            if len(set(s)) == 1:
+                res += s[0]
+            else:
+                return res
+        return res

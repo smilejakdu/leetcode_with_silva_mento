@@ -19,6 +19,11 @@ Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 
 '''
 
+''':arg
+answer1
+'''
+
+
 def isPalindrome(x):
     number = str(x)
     if 0 > x:
@@ -30,3 +35,28 @@ def isPalindrome(x):
     return False
 
 
+''':arg
+answer2
+'''
+
+
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        if x < 0:
+            return False
+
+        return str(x) == str(x)[::-1]
+
+
+''':arg
+answer3
+'''
+
+
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        x = str(x)
+        if x == x[::-1]:
+            return True
+        else:
+            return False
