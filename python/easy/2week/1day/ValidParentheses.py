@@ -32,6 +32,7 @@ Output: true
 
 Input = "()"
 
+
 class Solution(object):
     def isValid(self, string):
 
@@ -51,3 +52,19 @@ class Solution(object):
 
 s = Solution()
 print(s.isValid(Input))
+
+''':arg
+answer2
+'''
+
+
+class Solution:
+    def isValid(self, s: str) -> bool:
+        stack = []
+        d = {')': '(', '}': '{', ']': '['}
+        for c in s:
+            if c in d.values():
+                stack.append(c)
+            elif not stack or stack.pop() != d[c]:
+                return False
+        return True if not stack else False

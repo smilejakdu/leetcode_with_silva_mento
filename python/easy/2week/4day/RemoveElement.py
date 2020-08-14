@@ -25,3 +25,29 @@ class Solution(object):
 
         return len(nums)
 
+
+''':arg
+answer2
+사실 위의 풀이와 같지만 comprehension 을 사용했다는것에 차이가 있다.
+그리고 위에서는 기존에 있는 list 에서 빼는 방식이라면 ,
+밑에 방식은 list 를 다시 채워간다.
+'''
+
+
+def removeElement(nums, val):
+    nums = [nums[a] for a in range(len(nums)) if nums[a] != val]
+    return len(nums)
+
+
+''':arg
+answer3
+
+while 문으로 반복문을 돌린다 
+만약에 nums 라는 리스트에 val 이라는 요소가 있다면 while 문을 타게 된다.
+'''
+
+
+def removeElement(nums, val):
+    while val in nums:
+        nums.pop(nums.index(val))
+    return (len(nums))

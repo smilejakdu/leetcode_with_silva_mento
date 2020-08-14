@@ -28,3 +28,22 @@ class Solution(object):
                 nums.remove(num)
         return len(nums)
 
+
+''':arg
+answer 2 
+이거는 조금 문제가 있는게 중복된 숫자가 연속으로 나올때는 상관이 없겠지만 
+만약에 중복된 수가 연속으로 나오지 않을경우 문제가 생긴다.
+'''
+
+
+class Solution:
+    def removeDuplicates(self, nums):
+
+        index = 1
+
+        while index < len(nums):
+            if nums[index] == nums[index - 1]:
+                nums.pop(index)
+            else:
+                index += 1
+        return len(nums)

@@ -24,9 +24,9 @@ index() 함수라는것이 있는줄 몰랐다.
 로직을 골똘히 생각하고있었는데 , index 함수로 이렇게 간단하게 풀릴줄이야...
 '''
 
-
 haystack = "mississippi"
-needle   = "issip"
+needle = "issip"
+
 
 def strStr(haystack, needle):
     if needle in haystack:
@@ -36,8 +36,8 @@ def strStr(haystack, needle):
     else:
         return -1
 
-print(strStr(haystack , needle))
 
+print(strStr(haystack, needle))
 
 ''':arg
 answer 2
@@ -49,7 +49,8 @@ haystack[i:i + needle_length] 로 인해서 haystack 의 index i 부터 i+ needl
 return 으로 i 를 반환한다. 
 '''
 
-def strStr(self, haystack, needle):
+
+def strStr(haystack, needle):
     haystack_length = len(haystack)
     needle_length = len(needle)
     if haystack == needle:
@@ -60,3 +61,7 @@ def strStr(self, haystack, needle):
         if haystack[i:i + needle_length] == needle:
             return i
     return -1
+
+
+def strStr(haystack, needle):
+    return
