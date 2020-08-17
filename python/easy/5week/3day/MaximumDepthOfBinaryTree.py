@@ -32,7 +32,6 @@ class Solution(object):
         :type root: TreeNode
         :rtype: int
         """
-        print(max(root.left, root.right))
 
         if root is None:
             return 0

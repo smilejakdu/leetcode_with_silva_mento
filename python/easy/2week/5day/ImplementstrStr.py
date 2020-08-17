@@ -62,6 +62,3 @@ def strStr(haystack, needle):
             return i
     return -1
 
-
-def strStr(haystack, needle):
-    return

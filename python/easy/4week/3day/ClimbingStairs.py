@@ -24,6 +24,7 @@ s = 5
 
 def climbStairs(n):
     if (n == 1): return 1
+
     dp = [0] * (n + 1)
     dp[1] = 1
     dp[2] = 2

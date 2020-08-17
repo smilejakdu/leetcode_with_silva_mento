@@ -47,10 +47,13 @@ answer 2
 
 def lengthOfLastWord(s):
     s = s.strip()
+
     if not s:
         return 0
+
     if " " not in s:
         return len(s)
+
     cnt = 0
     for i in reversed(s):
         if i != " ":

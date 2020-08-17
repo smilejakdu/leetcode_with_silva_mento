@@ -28,6 +28,7 @@ answer 1
 def plusOne(digits):
     string = ''.join([str(d) for d in digits])
     to_string = str(int(string) + 1)
+
     result = []
     for string in to_string:
         result.append(int(string))
