@@ -43,7 +43,7 @@ class Solution(object):
         :rtype: bool
         """
         nodes = {}
-        while head != None:
+        while head:
             if head in nodes:
                 return True
             nodes[head] = head

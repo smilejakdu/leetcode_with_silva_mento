@@ -36,9 +36,10 @@ Input = "()"
 class Solution(object):
     def isValid(self, string):
 
-        left = ['(', '{', '[']
+        left  = ['(', '{', '[']
         right = [')', '}', ']']
         stack = []
+
         for letter in string:
             if letter in left:
                 stack.append(letter)

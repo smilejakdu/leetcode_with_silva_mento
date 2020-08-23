@@ -20,13 +20,12 @@ class Solution(object):
                     return [n1, n2]
 
 
-class Solution(object):
-    def twoSum(self, nums, target):
-        lookup = {}
-        for index, item in enumerate(nums):
-            if (target - item) in lookup:
-                return [lookup[target - item], index]
-            else:
-                lookup[item] = index
+def twoSum(nums, target):
+    result = {}
+    for index, item in enumerate(nums):
+        if (target - item) in result:
+            return [result[target - item], index]
+        else:
+            result[item] = index
 
-
+    return

@@ -72,8 +72,6 @@ class Solution(object):
 '''
 
 
-class Solution:
-    def reverse(self, x: int) -> int:
-        rev = int(str(abs(x))[::-1]) # 절대값으로 바꾸고 그것을 거꾸로해서 변수에 담는다
-        return (-rev if x < 0 else rev) if rev.bit_length() < 32 else 0
-
+def reverse(x: int) -> int:
+    rev = int(str(abs(x))[::-1])  # 절대값으로 바꾸고 그것을 거꾸로해서 변수에 담는다
+    return (-rev if x < 0 else rev) if rev.bit_length() < 32 else 0

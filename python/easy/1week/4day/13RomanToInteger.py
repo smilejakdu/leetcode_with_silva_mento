@@ -1,6 +1,4 @@
 ''':arg
-
-
 Symbol       Value
 I             1
 V             5
@@ -117,15 +115,28 @@ values = {
 }
 
 
-class Solution:
-    def romanToInt(self, s: str) -> int:
-        total = 0
-        i = 0
-        while i < len(s):
-            if i + 1 < len(s) and values[s[i]] < values[s[i + 1]]:
-                total += values[s[i + 1]] - values[s[i]]
-                i += 2
-            else:
-                total += values[s[i]]
-                i += 1
-        return total
+def romanToInt(s):
+    total = 0
+    i = 0
+
+    while i < len(s):
+        if i + 1 < len(s) and values[s[i]] < values[s[i + 1]]:
+            total += values[s[i + 1]] - values[s[i]]
+            i += 2
+        else:
+            total += values[s[i]]
+            i += 1
+    return total
+
+
+def romanToInt(s):
+    r     = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+    total = 0
+
+    for i in range(len(s) - 1):
+        if r[s[i]] < r[s[i + 1]]:
+            total -= r[s[i]]
+        else:
+            total += r[s[i]]
+    total += r[s[-1]]
+    return total

@@ -60,3 +60,17 @@ class Solution:
             return True
         else:
             return False
+
+
+class Solution(object):
+    def isPalindrome(self, x):
+        """
+        :type x: int
+        :rtype: bool
+        """
+        string_list = str(x)[::-1]
+
+        if string_list == str(x):
+            return True
+        else:
+            return False

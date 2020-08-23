@@ -18,14 +18,15 @@ Output: 4
 answer1
 '''
 
-# def singleNumber(nums):
-#     """
-#     :type nums: List[int]
-#     :rtype: int
-#     """
-#     for n in nums:
-#         if nums.count(n) == 1:
-#             return n
+
+def singleNumber(nums):
+    """
+    :type nums: List[int]
+    :rtype: int
+    """
+    for n in nums:
+        if nums.count(n) == 1:
+            return n
 
 
 ''':arg
