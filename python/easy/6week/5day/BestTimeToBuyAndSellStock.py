@@ -32,7 +32,6 @@ def maxProfit(prices):
 
     for price in prices:
         min_price = min(min_price, price)
-        print(min_price)
         profit = price - min_price
         max_profit = max(max_profit, profit)
 
