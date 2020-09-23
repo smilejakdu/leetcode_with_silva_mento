@@ -8,7 +8,7 @@
 전체 학생의 수 n,체육복을 도난당한 학생들의 번호가 담긴 배열 lost, 여벌의 체육복을 가져온 학생들의 번호가 담긴 배열 reserve가 매개변수로 주어질 때,
 체육수업을 들을 수 있는 학생의 최댓값을 return 하도록 solution 함수를 작성해주세요.
 
-제한사항 : 
+제한사항 :
 
 - 전체 학생의 수는 2명 이상 30명 이하입니다.
 
@@ -35,13 +35,13 @@ n	lost	  reserve	    return
 3	[3]	      [1]	        2
 '''
 
-n = 5
-lost = [2, 4]
+n       = 5
+lost    = [2, 4]
 reserve = [1, 3, 5]
 
 
 def solution(n, lost, reserve):
-    ans = [1 for i in range(0, n + 1)]
+    ans    = [1 for i in range(0, n + 1)]
     result = 0
 
     for i in range(1, n + 1):  # 전체 반학생수
@@ -58,11 +58,11 @@ def solution(n, lost, reserve):
 
         if ans[i] == 0 and ans[i - 1] == 2:
             ans[i - 1] = 1
-            ans[i] = 1
+            ans[i]     = 1
 
         elif ans[i] == 0 and ans[i + 1] == 2:
             ans[i + 1] = 1
-            ans[i] = 1
+            ans[i]     = 1
 
     for i in range(1, n + 1):
         if ans[i] > 0:
