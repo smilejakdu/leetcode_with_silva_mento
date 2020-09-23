@@ -43,9 +43,10 @@ def solution(answers):
     max_number  = max(answer_list)
     result_list = []
 
-    for k ,v in enumerate(answer_list):
-        if max_number == v:
-            result_list.append(k + 1)
+    for answer in range(0 , len(answer_list)):
+        print(answer)
+        if max_number == answer_list[answer]:
+            result_list.append(answer)
 
     return result_list
 
@@ -87,5 +88,6 @@ def solution(answers):
         for i, v in enumerate(p):
             if a == v[q % len(v)]:
                 s[i] += 1
+
     return [i + 1 for i, v in enumerate(s) if v == max(s)]
 
