@@ -17,7 +17,7 @@ arr	           divisor	   return
 
 # arr = [5, 9, 7, 10]
 arr = [2, 36, 1, 3]
-# divisor = 5
+# divisor = ㅏ5
 divisor = 1
 
 
