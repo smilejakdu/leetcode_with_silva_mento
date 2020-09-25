@@ -33,18 +33,17 @@ n = 1
 # n = 2
 
 
-# def solution(strings, n):
-#     for i in range(len(strings)):
-#         strings[i] = strings[i][n] + strings[i]
-#         print(strings[i])
-#     strings.sort()
-#
-#     answer = [strings[j][1:] for j in range(len(strings))]
-#
-#     return answer
-#
-#
-# print(solution(strings, n))
+def solution(strings, n):
+    for i in range(len(strings)):
+        strings[i] = strings[i][n] + strings[i]
+    strings.sort()
+
+    answer = [strings[j][1:] for j in range(len(strings))]
+
+    return answer
+
+
+print(solution(strings, n))
 
 
 # 다른 풀이2
