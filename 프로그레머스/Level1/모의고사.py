@@ -21,16 +21,14 @@ answers     return
 answer = [1, 2, 3, 4, 5]
 
 
-
 def solution(answers):
+    supo_list = [[1, 2, 3, 4, 5],
+                 [2, 1, 2, 3, 2, 4, 2, 5],
+                 [3, 3, 1, 1, 2, 2, 4, 4, 5, 5]]
 
-    supo_list    = [[1, 2, 3, 4, 5],
-                    [2, 1, 2, 3, 2, 4, 2, 5],
-                    [3, 3, 1, 1, 2, 2, 4, 4, 5, 5]]
+    answer_list = [0, 0, 0]
 
-    answer_list  = [0 , 0 , 0]
-
-    for answer in range(0 , len(answers)):
+    for answer in range(0, len(answers)):
         if supo_list[0][answer % len(supo_list[0])] == answers[answer]:
             answer_list[0] += 1
 
@@ -40,15 +38,16 @@ def solution(answers):
         if supo_list[2][answer % len(supo_list[2])] == answers[answer]:
             answer_list[2] += 1
 
-    max_number  = max(answer_list)
+    max_number = max(answer_list)
     result_list = []
 
-    for answer in range(0 , len(answer_list)):
+    for answer in range(0, len(answer_list)):
         print(answer)
         if max_number == answer_list[answer]:
             result_list.append(answer)
 
     return result_list
+
 
 print(solution(answer))
 
@@ -56,25 +55,26 @@ print(solution(answer))
 # 다른 사람 풀이2
 
 def solution(answers):
-    pattern1 = [1,2,3,4,5]
-    pattern2 = [2,1,2,3,2,4,2,5]
-    pattern3 = [3,3,1,1,2,2,4,4,5,5]
+    pattern1 = [1, 2, 3, 4, 5]
+    pattern2 = [2, 1, 2, 3, 2, 4, 2, 5]
+    pattern3 = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5]
     score = [0, 0, 0]
     result = []
 
     for idx, answer in enumerate(answers):
-        if answer == pattern1[idx%len(pattern1)]:
+        if answer == pattern1[idx % len(pattern1)]:
             score[0] += 1
-        if answer == pattern2[idx%len(pattern2)]:
+        if answer == pattern2[idx % len(pattern2)]:
             score[1] += 1
-        if answer == pattern3[idx%len(pattern3)]:
+        if answer == pattern3[idx % len(pattern3)]:
             score[2] += 1
 
     for idx, s in enumerate(score):
         if s == max(score):
-            result.append(idx+1)
+            result.append(idx + 1)
 
     return result
+
 
 # 다른 사람 풀이3
 
@@ -90,4 +90,3 @@ def solution(answers):
                 s[i] += 1
 
     return [i + 1 for i, v in enumerate(s) if v == max(s)]
-
