@@ -24,10 +24,10 @@ def solution(prices):
 
     answer   = []
 
-    for price1 in range(0 , len(prices)-1):
+    for price1 in range(len(prices)):
         increase = 0
 
-        for price2 in range(price1 , len(prices)):
+        for price2 in range(price1 , len(prices)-1):
             if prices[price1] <= prices[price2]:
                 increase += 1
 
