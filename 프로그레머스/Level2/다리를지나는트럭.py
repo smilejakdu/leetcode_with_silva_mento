@@ -31,12 +31,17 @@ bridge_length , weight , truck_weights =  2 , 10 , [7 , 4 , 5 , 6]
 # 경과 시간	다리를 지난 트럭	다리를 건너는 트럭	대기 트럭
 
 def solution(bridge_length, weight, truck_weights):
-    answer      = 0
-    plus_weight = 0
+    경과시간         = 0
+    다리를지난트럭   = []
+    다리를건너는트럭 = []
+    대기트럭         = truck_weights
 
-    for truck in truck_weights:
-        print(truck)
+    for 트럭 in 대기트럭:
+        다리를건너는트럭.append(트럭)
 
-    return answer
+
+    return 경과시간
 
 print(solution(bridge_length , weight , truck_weights))
+
+
